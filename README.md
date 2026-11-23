@@ -17,11 +17,35 @@
   An integrated suite of multi-platform applications architected for <b>State University of Bangladesh (SUB)</b>, streamlining academic scheduling, live campus transit telemetry, exam routine distribution, PDF report generation, and role-based administrative control.
 </p>
 
+<p align="center">
+  <a href="https://github.com/AkonMHasib/SUBTools/releases/latest/download/app-release.apk">
+    <img src="https://img.shields.io/badge/Download%20APK-Android%20v3.0-success?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://sub-tools.vercel.app">
+    <img src="https://img.shields.io/badge/Launch%20Web%20Portal-iOS%20%7C%20Web-blue?style=for-the-badge&logo=safari&logoColor=white" alt="Launch Web Portal" />
+  </a>
+</p>
+
 ---
 
 </div>
 
+## 🚀 Quick Access & Downloads
+
+| Platform | Access Method | Target Audience | Direct Link |
+|---|---|---|---|
+| **Android** | Native Mobile APK | Students, Faculty | [📥 **Download Latest APK (`app-release.apk`)**](https://github.com/AkonMHasib/SUBTools/releases/latest/download/app-release.apk) |
+| **iOS / iPadOS** | Web Portal (PWA Supported) | iPhone, iPad users | [🌐 **Browse on iOS (`sub-tools.vercel.app`)**](https://sub-tools.vercel.app) |
+| **Desktop / PC** | Web Portal & Admin Console | Students, Teachers & Admins | [💻 **Open Web Dashboard**](https://sub-tools.vercel.app) |
+
+> [!TIP]
+> **For iOS Users**: Open [sub-tools.vercel.app](https://sub-tools.vercel.app) in **Safari**, tap the **Share** button, and select **"Add to Home Screen"** to install SUBTools as a standalone progressive web app with a full-screen experience.
+
+---
+
 ## Table of Contents
+- [Quick Access & Downloads](#-quick-access--downloads)
 - [Executive Overview](#-executive-overview)
 - [System Architecture](#-system-architecture)
 - [Monorepo Workspace Modules](#-monorepo-workspace-modules)
