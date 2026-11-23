@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@drawable/bg_dialog_rounded">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🛠️"
+        android:textSize="54sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/dialog_maintenance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="System Maintenance"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/dialog_maintenance_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBTools is currently undergoing scheduled maintenance to improve services. Normal operations will resume shortly."
+        android:textColor="@color/text_secondary_light"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urgent Assistance: Hotline 16665 • info@sub.edu.bd"
+        android:textColor="@color/text_hint_light"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_btn_retry_maintenance"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Retry Connection"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="14dp"
+        app:backgroundTint="@color/primary" />
+
+</LinearLayout>

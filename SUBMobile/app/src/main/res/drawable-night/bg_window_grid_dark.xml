@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid dark base background -->
+    <item>
+        <color android:color="@color/bg_light" />
+    </item>
+    <!-- Seamless repeating subtle grid overlay (~5.5% opacity) -->
+    <item>
+        <bitmap
+            android:src="@drawable/pattern_grid_dark"
+            android:tileMode="repeat"
+            android:dither="true" />
+    </item>
+</layer-list>

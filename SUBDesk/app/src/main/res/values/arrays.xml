@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Filter arrays (include "All" options for filter spinners in list view) -->
+    <string-array name="terms_array">
+        <item>All Terms</item>
+        <item>N/A</item>
+        <item>Term-1</item>
+        <item>Term-2</item>
+        <item>Term-3</item>
+        <item>Term-4</item>
+        <item>Term-5</item>
+        <item>Term-6</item>
+        <item>Term-7</item>
+        <item>Term-8</item>
+        <item>Term-9</item>
+        <item>Term-10</item>
+        <item>Term-11</item>
+        <item>Term-12</item>
+    </string-array>
+
+    <string-array name="days_array">
+        <item>All Days</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
+    <!-- Dialog-only arrays (no "All" placeholders — for day/time spinners in Add/Edit dialog) -->
+    <string-array name="dialog_days_array">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
+    <!-- Term pill options (matches SUBAdmin exactly — hyphen format "Term-1") -->
+    <string-array name="term_pills_array">
+        <item>All Terms</item>
+        <item>N/A</item>
+        <item>Term-1</item>
+        <item>Term-2</item>
+        <item>Term-3</item>
+        <item>Term-4</item>
+        <item>Term-5</item>
+        <item>Term-6</item>
+        <item>Term-7</item>
+        <item>Term-8</item>
+        <item>Term-9</item>
+        <item>Term-10</item>
+        <item>Term-11</item>
+        <item>Term-12</item>
+    </string-array>
+
+    <!-- Architecture Studio options (Studios 1-10) -->
+    <string-array name="arch_studio_pills_array">
+        <item>All Terms</item>
+        <item>N/A</item>
+        <item>Studio 1</item>
+        <item>Studio 2</item>
+        <item>Studio 3</item>
+        <item>Studio 4</item>
+        <item>Studio 5</item>
+        <item>Studio 6</item>
+        <item>Studio 7</item>
+        <item>Studio 8</item>
+        <item>Studio 9</item>
+        <item>Studio 10</item>
+    </string-array>
+
+    <!-- Architecture terms filter array (for routine filter spinner) -->
+    <string-array name="arch_terms_array">
+        <item>All Terms</item>
+        <item>N/A</item>
+        <item>Studio 1</item>
+        <item>Studio 2</item>
+        <item>Studio 3</item>
+        <item>Studio 4</item>
+        <item>Studio 5</item>
+        <item>Studio 6</item>
+        <item>Studio 7</item>
+        <item>Studio 8</item>
+        <item>Studio 9</item>
+        <item>Studio 10</item>
+    </string-array>
+
+    <!-- Section pill options (matches A/1, B/2, etc.) -->
+    <string-array name="section_pills_array">
+        <item>All Sections</item>
+        <item>N/A</item>
+        <item>A/1</item>
+        <item>B/2</item>
+        <item>C/3</item>
+        <item>D/4</item>
+        <item>E/5</item>
+    </string-array>
+
+    <!-- Routine type filter -->
+    <string-array name="routine_types_array">
+        <item>All Routines</item>
+        <item>Regular Only</item>
+        <item>Temporary Only</item>
+    </string-array>
+
+    <!-- Building/Tower (short names matching SUBAdmin — no "Tower" suffix stored in Firestore) -->
+    <string-array name="towers_array">
+        <item>Shadhinota</item>
+        <item>Bijoy</item>
+    </string-array>
+
+    <string-array name="departments_array">
+        <item>CSE</item>
+        <item>ARCH</item>
+        <item>DSE</item>
+        <item>BBA</item>
+        <item>ENG</item>
+        <item>LAW</item>
+        <item>PHAR</item>
+        <item>EEE</item>
+        <item>ENV</item>
+        <item>FENS</item>
+        <item>JCMS</item>
+        <item>MIB</item>
+    </string-array>
+
+    <string-array name="academic_levels_array">
+        <item>Undergraduate</item>
+        <item>Postgraduate</item>
+        <item>Diploma</item>
+    </string-array>
+</resources>

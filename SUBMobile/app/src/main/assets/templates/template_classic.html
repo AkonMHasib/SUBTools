@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cover Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+        body { font-family: 'Times New Roman', serif; text-align: center; padding: 40px; box-sizing: border-box; }
+        .university { font-size: 28px; font-weight: bold; }
+        .department { font-size: 22px; margin-top: 10px; }
+        .topic-box { border: 2px solid black; padding: 20px; margin: 50px auto; width: 80%; }
+        .topic-label { font-size: 18px; }
+        .topic { font-size: 24px; font-weight: bold; margin-top: 10px; }
+        .details { text-align: left; width: 70%; margin: 50px auto; line-height: 2.5; font-size: 18px; }
+        .details .label { font-weight: bold; }
+        .footer { margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <div class="logo"><img src="logo.png" alt="Logo" width="300"></div>
+    <div class="department">Department of {{by_department}}</div>
+    <div class="topic-box">
+        <div class="topic-label">Assignment On</div>
+        <div class="topic">{{assignment_topic}}</div>
+    </div>
+    <div class="details">
+        <div><span class="label">Course Code:</span> {{course_code}}</div>
+        <div><span class="label">Course Title:</span> {{course_title}}</div>
+        <div><span class="label">Assignment No:</span> {{assignment_number}}</div>
+        <br>
+        <div><span class="label">Submitted By:</span></div>
+        <div>{{by_name}}</div>
+        <div>{{by_id}}</div>
+        <br>
+        {{SUBMITTED_TO_SECTION}}
+    </div>
+    <div class="footer"><span class="label">Date of Submission:</span><br>{{submission_date}}</div>
+</body>
+</html>

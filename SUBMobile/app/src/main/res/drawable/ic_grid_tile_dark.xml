@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <!-- Subtle architectural matrix grid pattern: 40x40dp tile with 2% opacity white lines -->
+    <path
+        android:pathData="M 0,0 L 40,0 M 0,0 L 0,40"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.8"
+        android:strokeAlpha="0.04" />
+</vector>

@@ -1,0 +1,50 @@
+{
+  "department": "BBA",
+  "departmentName": "Bachelor of Business Administration",
+  "levels": {
+    "Term-1": [
+      { "code": "BUS-111", "name": "Introduction to Business", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "ACT-111", "name": "Financial Accounting I", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-2": [
+      { "code": "ECO-121", "name": "Microeconomics", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "MKT-121", "name": "Principles of Marketing", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-3": [
+      { "code": "MGT-131", "name": "Principles of Management", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "ECO-131", "name": "Macroeconomics", "credits": 3.0, "type": "Theory", "prerequisite": "ECO-121" }
+    ],
+    "Term-4": [
+      { "code": "FIN-211", "name": "Principles of Finance", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "STAT-211", "name": "Business Statistics I", "credits": 3.0, "type": "Math", "prerequisite": "" }
+    ],
+    "Term-5": [
+      { "code": "HRM-221", "name": "Human Resource Management", "credits": 3.0, "type": "Theory", "prerequisite": "MGT-131" },
+      { "code": "MIS-221", "name": "Management Information Systems", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-6": [
+      { "code": "BUS-231", "name": "Business Communication", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "LAW-231", "name": "Business Law & Legal Environment", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-7": [
+      { "code": "FIN-311", "name": "Corporate Finance", "credits": 3.0, "type": "Theory", "prerequisite": "FIN-211" },
+      { "code": "MKT-311", "name": "Consumer Behavior", "credits": 3.0, "type": "Theory", "prerequisite": "MKT-121" }
+    ],
+    "Term-8": [
+      { "code": "MGT-321", "name": "Operations Management", "credits": 3.0, "type": "Theory", "prerequisite": "" },
+      { "code": "BUS-321", "name": "International Business", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-9": [
+      { "code": "MGT-331", "name": "Strategic Management", "credits": 3.0, "type": "Theory", "prerequisite": "MGT-131" }
+    ],
+    "Term-10": [
+      { "code": "BUS-411", "name": "Entrepreneurship & Small Business", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-11": [
+      { "code": "BUS-421", "name": "Business Ethics & Corporate Governance", "credits": 3.0, "type": "Theory", "prerequisite": "" }
+    ],
+    "Term-12": [
+      { "code": "BUS-400", "name": "BBA Internship & Project Report", "credits": 6.0, "type": "Project", "prerequisite": "" }
+    ]
+  }
+}

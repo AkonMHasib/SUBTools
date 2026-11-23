@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment Cover</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+        }
+        @page { size: A4; margin: 0; }
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        .page-container {
+            padding: 20mm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        .logo { max-width: 250px; margin: 20px 0; }
+        .department-name { font-size: 20px; text-align: center;}
+        .assignment-topic {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .course-details { text-align: center; margin-bottom: 30px; font-size: 16px; line-height: 1.6; }
+        .submission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .submission-table td {
+            border: 1px solid #999;
+            padding: 15px;
+            vertical-align: top;
+            width: 50%;
+            line-height: 1.8;
+        }
+        .submission-table h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .footer { text-align: center; margin-top: auto; padding-top: 30px; font-size: 16px; }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <img src="logo.png" class="logo" />
+    <div class="department-name">Department of {{by_department}}</div>
+    <div class="assignment-topic">{{assignment_topic}}</div>
+    <div class="course-details">
+        <strong>Course Code:</strong> {{course_code}}<br>
+        <strong>Course Title:</strong> {{course_title}}
+    </div>
+    <table class="submission-table">
+        <tr>
+            <td>
+                <h3>Submitted By</h3>
+                <strong>Name:</strong> {{by_name}}<br>
+                <strong>ID:</strong> {{by_id}}<br>
+                <strong>Department:</strong> {{by_department}}
+            </td>
+            {{SUBMITTED_TO_SECTION}}
+        </tr>
+    </table>
+    <div class="footer">
+        <strong>Date of Submission:</strong> {{submission_date}}
+    </div>
+</div>
+</body>
+</html>

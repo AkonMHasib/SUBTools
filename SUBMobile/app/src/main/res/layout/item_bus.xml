@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/card_light"
+    app:cardElevation="0dp"
+    app:strokeWidth="1.2dp"
+    app:strokeColor="@color/border_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Bus Name, Plate, Stops Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/text_bus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Madhobilota"
+                android:textColor="#2563EB"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_bus_name_badge"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text_bus_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DM-SA-11-0722"
+                android:textColor="@color/text_secondary_light"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:background="@drawable/bg_bus_plate_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:layout_marginEnd="6dp" />
+
+            <!-- Stops Action Button on top right -->
+            <LinearLayout
+                android:id="@+id/btn_top_stops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_bus_plate_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_list"
+                    app:tint="#2563EB"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stops"
+                    android:textColor="@color/text_secondary_light"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Route Title with Navigation Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_navigation"
+                app:tint="#2563EB"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/text_bus_route"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Gazipur Route"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/badge_override"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCHEDULE CHANGED"
+                android:textColor="#B45309"
+                android:background="@drawable/bg_bus_plate_badge"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Bus Timing Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_bus_timing_box"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_clock"
+                app:tint="#2563EB"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/text_bus_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Campus: 7:00 AM • From Campus: 4:50 PM"
+                android:textColor="@color/text_secondary_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stoppages preview text -->
+        <TextView
+            android:id="@+id/text_stoppages_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Route: Gazipur (Chowrasta) • Boardbazar • Campus"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="11.5sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Starts, Driver, Capacity row matching Web Portal grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Starts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="#2563EB"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/text_starting_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Starts: Gazipur"
+                    android:textColor="@color/text_secondary_light"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <!-- Driver -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_user"
+                    app:tint="@color/text_hint_light"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/text_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver: Salam Mia"
+                    android:textColor="@color/text_secondary_light"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Capacity row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="14dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@color/text_hint_light"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/text_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity: 36 Seats"
+                android:textColor="@color/text_secondary_light"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Divider line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border_light"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bottom Actions Row: Call Driver, Route & Stops, Open In Browser -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Call Driver Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_call_driver"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:paddingHorizontal="12dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Call Driver"
+                android:textColor="@color/text_secondary_light"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_phone"
+                app:iconSize="13dp"
+                app:iconTint="#2563EB"
+                app:strokeColor="@color/border_light"
+                app:strokeWidth="1.2dp"
+                app:cornerRadius="10dp"
+                app:iconPadding="4dp"
+                android:layout_marginEnd="6dp" />
+
+            <!-- Route & Stops Button (opens bottom sheet modal) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_route_stops"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="38dp"
+                android:paddingHorizontal="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Route &amp; Stops"
+                android:textColor="@color/text_secondary_light"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_list"
+                app:iconSize="13dp"
+                app:iconTint="#2563EB"
+                app:strokeColor="@color/border_light"
+                app:strokeWidth="1.2dp"
+                app:cornerRadius="10dp"
+                app:iconPadding="4dp"
+                android:layout_marginEnd="6dp" />
+
+            <!-- Open In Browser Icon Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_external"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:padding="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:backgroundTint="#2563EB"
+                app:icon="@drawable/ic_launch"
+                app:iconSize="14dp"
+                app:iconTint="@color/white"
+                app:iconGravity="textStart"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

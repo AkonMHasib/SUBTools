@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:background="@drawable/bg_nav_header_gradient"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Avatar Container -->
+    <FrameLayout
+        android:id="@+id/header_avatar_container"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/header_avatar_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="27dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_light"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1.5dp">
+
+            <ImageView
+                android:id="@+id/header_img_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Profile Photo" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/header_avatar_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:cardCornerRadius="27dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/primary_variant"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1.5dp">
+
+            <TextView
+                android:id="@+id/header_txt_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+    <!-- Student Name -->
+    <TextView
+        android:id="@+id/header_txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:singleLine="true"/>
+
+    <!-- Student Email -->
+    <TextView
+        android:id="@+id/header_txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="student@sub.edu.bd"
+        android:textColor="#C7D2FE"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>

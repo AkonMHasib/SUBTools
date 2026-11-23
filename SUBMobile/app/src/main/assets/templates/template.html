@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment Cover</title>
+
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+        }
+
+        @page { size: A4; margin: 0; }
+
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .outer {
+            width: 100%;
+            height: 100%;
+            padding: 12.7mm;
+            box-sizing: border-box;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+            border: 3px dotted #0F9840;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .section {
+            margin-top: 22px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .green {
+            color: #0F9840;
+            font-weight: bold;
+        }
+
+        img.logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="outer">
+    <div class="page">
+
+        <img src="logo.png" class="logo" />
+
+        <div class="section">
+
+            <div><strong>Course Code:</strong> {{course_code}}</div>
+            <div><strong>Course Title:</strong> {{course_title}}</div>
+        </div>
+
+        <div class="section">
+            <div class="green">Assignment {{assignment_number}}</div>
+            <div>{{assignment_topic}}</div>
+        </div>
+
+        {{SUBMITTED_TO_SECTION}}
+
+        <div class="section">
+            <div class="green">Submitted By</div>
+            <div><strong></strong> {{by_name}}</div>
+            <div><strong>ID:</strong> {{by_id}}</div>
+            <div>Department of: {{by_department}}</div>
+        </div>
+
+        <div class="section">
+            <strong>Submission Date:</strong> {{submission_date}}
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

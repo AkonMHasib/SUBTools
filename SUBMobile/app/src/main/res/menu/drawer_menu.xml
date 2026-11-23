@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Always Visible Main Destination -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_nav_home"
+        android:title="Home" />
+
+    <!-- 1. ACADEMICS & SCHEDULE CATEGORY HEADER -->
+    <item
+        android:id="@+id/header_academics"
+        android:icon="@drawable/ic_nav_routine"
+        android:title="Academics &amp; Schedule  ▼" />
+    <item
+        android:id="@+id/navigation_subjects"
+        android:icon="@drawable/ic_nav_subjects"
+        android:title="    Subject Manager" />
+    <item
+        android:id="@+id/navigation_routine"
+        android:icon="@drawable/ic_nav_routine"
+        android:title="    Class Routine" />
+    <item
+        android:id="@+id/navigation_cover_page"
+        android:icon="@drawable/ic_nav_cover_page"
+        android:title="    Cover Page Generator" />
+
+    <!-- 2. CAMPUS DIRECTORY & ANNOUNCEMENTS CATEGORY HEADER -->
+    <item
+        android:id="@+id/header_campus"
+        android:icon="@drawable/ic_nav_notices"
+        android:title="Campus &amp; Notices  ▼" />
+    <item
+        android:id="@+id/navigation_notices"
+        android:icon="@drawable/ic_nav_notices"
+        android:title="    Notices &amp; Announcements" />
+    <item
+        android:id="@+id/navigation_faculty"
+        android:icon="@drawable/ic_nav_faculty"
+        android:title="    Faculty Directory" />
+    <item
+        android:id="@+id/navigation_transport"
+        android:icon="@drawable/ic_nav_transport"
+        android:title="    Transport Fleet" />
+
+    <!-- 3. STUDENT SERVICES CATEGORY HEADER -->
+    <item
+        android:id="@+id/header_services"
+        android:icon="@drawable/ic_nav_lost_found"
+        android:title="Student Services  ▼" />
+    <item
+        android:id="@+id/navigation_blood_donor"
+        android:icon="@drawable/ic_nav_blood"
+        android:title="    Blood Donors" />
+    <item
+        android:id="@+id/navigation_lost_found"
+        android:icon="@drawable/ic_nav_lost_found"
+        android:title="    Lost &amp; Found" />
+    <item
+        android:id="@+id/navigation_tuition_finder"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="    Tuition Finder" />
+    <item
+        android:id="@+id/navigation_room_finder"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="    Room Sharing &amp; Sublets" />
+
+    <!-- 4. PROFILE & SUPPORT CATEGORY HEADER -->
+    <item
+        android:id="@+id/header_support"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="Profile &amp; Support  ▼" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="    My Profile" />
+    <item
+        android:id="@+id/navigation_need_to_talk"
+        android:icon="@drawable/ic_phone"
+        android:title="    Need to Talk?" />
+    <item
+        android:id="@+id/navigation_about_developer"
+        android:icon="@drawable/ic_nav_dev"
+        android:title="    About Developer" />
+    <item
+        android:id="@+id/navigation_contributors"
+        android:icon="@drawable/ic_nav_faculty"
+        android:title="    Admins Directory" />
+
+</menu>

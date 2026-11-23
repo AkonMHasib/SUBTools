@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.akon.subtools.coordinator.ui.dashboard.DashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_routines"
+        android:name="com.akon.subtools.coordinator.ui.routine.RoutineFragment"
+        android:label="Routines" />
+
+    <fragment
+        android:id="@+id/navigation_students"
+        android:name="com.akon.subtools.coordinator.ui.students.StudentsFragment"
+        android:label="Students" />
+
+    <fragment
+        android:id="@+id/navigation_faculty"
+        android:name="com.akon.subtools.coordinator.ui.faculty.FacultyFragment"
+        android:label="Faculty" />
+
+    <fragment
+        android:id="@+id/navigation_notices"
+        android:name="com.akon.subtools.coordinator.ui.notices.NoticesFragment"
+        android:label="Notices" />
+
+    <fragment
+        android:id="@+id/navigation_transport"
+        android:name="com.akon.subtools.coordinator.ui.transport.TransportFragment"
+        android:label="Transport" />
+
+    <fragment
+        android:id="@+id/navigation_subjects"
+        android:name="com.akon.subtools.coordinator.ui.subjects.SubjectsFragment"
+        android:label="Subjects" />
+
+    <fragment
+        android:id="@+id/navigation_rbac"
+        android:name="com.akon.subtools.coordinator.ui.rbac.RbacFragment"
+        android:label="RBAC Control" />
+
+</navigation>

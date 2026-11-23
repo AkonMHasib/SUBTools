@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment Cover</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+        }
+
+        @page { size: A4; margin: 0; }
+
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+
+        .page-container {
+            width: 100%;
+            height: 100%;
+            padding: 15mm;
+            box-sizing: border-box;
+        }
+
+        .content-frame {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #444;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10mm;
+        }
+
+
+
+
+        .logo {
+            max-width: 250px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .assignment-title-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .assignment-title-label {
+            font-size: 20px;
+        }
+
+        .assignment-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .course-details-section {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .submission-details {
+            display: flex;
+            justify-content: center; /* Center the boxes */
+            align-items: flex-start;
+            width: 100%;
+            gap: 20px;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+
+        .submission-box {
+            border: 1px solid #999;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            max-width: 45%; /* Ensure boxes don't get too wide */
+            line-height: 1.8;
+        }
+
+        .submission-box h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <div class="content-frame">
+
+        <img src="logo.png" class="logo" />
+
+        <div class="assignment-title-section">
+            <div class="assignment-title-label">Assignment on</div>
+            <div class="assignment-title">{{assignment_topic}}</div>
+        </div>
+
+        <div class="course-details-section">
+            <strong>Course Code:</strong> {{course_code}}<br>
+            <strong>Course Title:</strong> {{course_title}}<br>
+            <strong>Assignment No:</strong> {{assignment_number}}
+        </div>
+
+        <div class="submission-details">
+            {{SUBMITTED_TO_SECTION}}
+
+            <div class="submission-box">
+                <h3>Submitted By</h3>
+                <strong>Name:</strong> {{by_name}}<br>
+                <strong>ID:</strong> {{by_id}}<br>
+                <strong>Department:</strong> {{by_department}}
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>Date of Submission:</strong> {{submission_date}}
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

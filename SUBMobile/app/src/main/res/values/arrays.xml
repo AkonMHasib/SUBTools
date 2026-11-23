@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tuition_medium_options">
+        <item>Bangla Medium</item>
+        <item>English Medium</item>
+        <item>English Version</item>
+        <item>Madrasah</item>
+    </string-array>
+
+    <string-array name="tuition_grade_options">
+        <item>Class 1-5</item>
+        <item>Class 6-8</item>
+        <item>SSC / Class 9-10</item>
+        <item>HSC / College</item>
+        <item>Admission Test</item>
+    </string-array>
+
+    <string-array name="tuition_days_options">
+        <item>3 Days / Week</item>
+        <item>4 Days / Week</item>
+        <item>5 Days / Week</item>
+        <item>Flexible</item>
+    </string-array>
+</resources>

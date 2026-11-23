@@ -1,0 +1,86 @@
+# ==========================================
+# SUBTools Monorepo - Git Ignore Rules
+# ==========================================
+
+# Environment & Secret Files
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+local.properties
+secrets.properties
+!secrets.properties.example
+google-services.json
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+*service-account*.json
+firebase-service-account.json
+
+# Keystores & Signing Keys
+*.jks
+*.keystore
+*.pepk
+*.p12
+*.pem
+*.key
+*.crt
+stc-release
+subtools-release
+*-release
+
+
+# Node & Dependencies (SUBAdmin & Firebase Functions)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Web Build Outputs & Cache (SUBAdmin)
+dist/
+dist-ssr/
+.vite/
+.output/
+.turbo/
+.cache/
+
+# Android & Gradle Build Artifacts (STC & SUBMobile)
+.gradle/
+build/
+**/build/
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+*.bak
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini

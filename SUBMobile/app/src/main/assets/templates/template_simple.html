@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment Cover</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+        }
+        @page { size: A4; margin: 0; }
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between; /* Pushes header and footer to edges */
+            height: 100%;
+            padding: 20mm;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .header, .content, .footer {
+            width: 100%;
+        }
+        .logo { max-width: 250px; margin-bottom: 15px; }
+        .university-name { font-size: 26px; font-weight: bold; }
+        .department-name { font-size: 20px; margin-top: 5px; }
+
+        .assignment-title-section {
+            margin: 40px 0;
+        }
+        .assignment-title-label { font-size: 20px; }
+        .assignment-title { font-size: 24px; font-weight: bold; margin-top: 8px; }
+
+        .details-section {
+            display: inline-block; /* Allows the block to be centered */
+            text-align: left; /* Aligns text inside to the left */
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .submission-section {
+       display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    line-height: 2;
+    font-size: 16px;
+    flex-direction: column;
+        }
+        .submission-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center; /* Center the "Submitted By" heading */
+        }
+        .footer {
+             margin-top: auto; /* Pushes footer to the bottom */
+             padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <img src="logo.png" class="logo" />
+            <div class="university-name">State University of Bangladesh</div>
+            <div class="department-name">Department of {{by_department}}</div>
+        </div>
+
+        <div class="content">
+            <div class="assignment-title-section">
+                <div class="assignment-title-label">Assignment on</div>
+                <div class="assignment-title">{{assignment_topic}}</div>
+            </div>
+
+            <div class="details-section">
+                <strong>Course Title:</strong> {{course_title}}<br>
+                <strong>Course Code:</strong> {{course_code}}
+            </div>
+
+            <div class="submission-section">
+                <h3>Submitted By</h3>
+                <strong><span> {{by_name}}</span></strong>
+        <span> ID: {{by_id}}</span>
+            </div>
+
+            {{SUBMITTED_TO_SECTION}}
+        </div>
+
+        <div class="footer">
+            <strong>Date of Submission:</strong> {{submission_date}}
+        </div>
+    </div>
+</body>
+</html>

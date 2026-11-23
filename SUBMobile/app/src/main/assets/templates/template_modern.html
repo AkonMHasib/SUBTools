@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Assignment Cover</title>
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+        }
+
+        @page { size: A4; margin: 0; }
+
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            background-color: #F1F8E9; /* Very light green background */
+        }
+
+        .page-container {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center the content */
+            padding: 15mm;
+        }
+
+        .logo-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 250px; /* Larger logo */
+        }
+
+        .topic {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #4CAF50; /* Green color for topic */
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: left;
+            gap: 20px;
+            width: 100%;
+            margin: 30px auto;
+            font-size: 15px;
+        }
+
+        .info-grid > div {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #E0E0E0;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #388E3C; /* Darker green for labels */
+        }
+
+        .submission-details {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submission-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            max-width: 48%;
+            box-sizing: border-box;
+            border: 1px solid #E0E0E0;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .submission-box h3 {
+            margin-top: 0;
+            color: #388E3C;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 16px;
+            background-color: #A5D6A7; /* Light green footer */
+            padding: 10px 0;
+            color: #1B5E20; /* Dark green text for footer */
+        }
+    </style>
+</head>
+<body>
+<div class="page-container">
+    <div class="logo-header">
+        <img src="logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="topic">{{assignment_topic}}</div>
+
+    <div class="info-grid">
+        <div><span class="label">Course Code:</span> {{course_code}}</div>
+        <div><span class="label">Course Title:</span> {{course_title}}</div>
+        <div><span class="label">Assignment No:</span> {{assignment_number}}</div>
+    </div>
+
+    <div class="submission-details">
+        {{SUBMITTED_TO_SECTION}}
+        <div class="submission-box">
+            <h3>Submitted By</h3>
+            <strong>Name:</strong> {{by_name}}<br>
+            <strong>ID:</strong> {{by_id}}<br>
+            <strong>Department:</strong> {{by_department}}
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <strong>Date of Submission:</strong> {{submission_date}}
+</div>
+
+</body>
+</html>

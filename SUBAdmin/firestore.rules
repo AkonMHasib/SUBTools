@@ -1,0 +1,178 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --- Helper Functions ---
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isSuperAdmin() {
+      return isAuthenticated() && (
+        (request.auth.token.email != null &&
+         (request.auth.token.email in [
+           'akonmhasib@gmail.com',
+           'subtools.admin@gmail.com',
+           'akonszone@gmail.com',
+         ] || request.auth.token.email.matches('(?i)^(akonmhasib@gmail\\.com|subtools\\.admin@gmail\\.com|hasiburrahman@gmail\\.com|akonszone@gmail\\.com)$'))) ||
+        (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+         (get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in ['super_admin', 'Super_admin'] ||
+          ('roles' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data &&
+           'super_admin' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.roles)))
+      );
+    }
+
+    function isAdmin() {
+      return isSuperAdmin() || (
+        isAuthenticated() && exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isCoordinator() {
+      return isSuperAdmin() || (
+        isAuthenticated() && (
+          (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+           (get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in ['admin', 'coordinator'] ||
+            ('roles' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data &&
+             'coordinator' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.roles))) ||
+          exists(/databases/$(database)/documents/coordinators/$(request.auth.uid))
+        )
+      );
+    }
+
+    function isModerator() {
+      return isSuperAdmin() || (
+        isAuthenticated() && (
+          (exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+           (get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in ['admin', 'moderator'] ||
+            ('roles' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data &&
+             'moderator' in get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.roles)))
+        )
+      );
+    }
+
+    // --- Users Collection ---
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isSuperAdmin() || (
+        isAuthenticated() && request.auth.uid == userId &&
+        (request.resource.data.role == 'student' || !('role' in request.resource.data))
+      );
+      allow update: if isSuperAdmin() || (
+        isAuthenticated() && request.auth.uid == userId &&
+        (!('role' in request.resource.data) || request.resource.data.role == resource.data.role)
+      );
+      allow delete: if isSuperAdmin();
+    }
+
+    // --- Admins Roster ---
+    match /admins/{adminId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+    }
+
+    // --- Academic Timetable & Catalog ---
+    match /routines/{routineId} {
+      allow read: if isAuthenticated();
+      allow write: if isCoordinator() || isSuperAdmin();
+    }
+
+    match /subjects/{subjectId} {
+      allow read: if isAuthenticated();
+      allow write: if isCoordinator() || isSuperAdmin();
+    }
+
+    match /faculty/{facultyId} {
+      allow read: if isAuthenticated();
+      allow write: if isCoordinator() || isSuperAdmin();
+    }
+
+    // --- Notices & Schedules ---
+    match /notices/{noticeId} {
+      allow read: if isAuthenticated();
+      allow write: if isModerator() || isCoordinator() || isSuperAdmin();
+    }
+
+    match /scheduled_notices/{noticeId} {
+      allow read, write: if isModerator() || isCoordinator() || isSuperAdmin();
+    }
+
+    // --- University Holidays ---
+    match /holidays/{holidayId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+    }
+
+    // --- Fleet & Transport ---
+    match /buses/{busId} {
+      allow read: if isAuthenticated();
+      allow write: if isModerator() || isSuperAdmin();
+    }
+
+    match /routes/{routeId} {
+      allow read: if isAuthenticated();
+      allow write: if isModerator() || isSuperAdmin();
+    }
+
+    // --- Community Modules ---
+    match /lostFound/{itemId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && (
+        !('approvalStatus' in request.resource.data) ||
+        request.resource.data.approvalStatus == 'pending'
+      );
+      allow update, delete: if isModerator() || isSuperAdmin() || (
+        isAuthenticated() && resource.data.userId == request.auth.uid
+      );
+    }
+
+    match /tuitions/{tuitionId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isModerator() || isSuperAdmin() || (
+        isAuthenticated() && resource.data.publisherUid == request.auth.uid
+      );
+    }
+
+    match /sublets/{subletId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update, delete: if isModerator() || isSuperAdmin() || (
+        isAuthenticated() && resource.data.publisherUid == request.auth.uid
+      );
+    }
+
+    // --- Activity Logs (Append-Only Audit Trail) ---
+    match /activityLogs/{logId} {
+      allow read: if isSuperAdmin();
+      allow create: if isAdmin();
+      allow update: if isSuperAdmin();
+      allow delete: if false;
+    }
+
+    // --- System & Admin Config Documents ---
+    match /admin/{configDoc} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+      allow update: if isAuthenticated() && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+        'totalClicks', 'totalAdClicks', 'navClicks', 'homeClicks', 'fullscreenClicks', 'lastClickAt',
+        'nav_drawer.clicks', 'nav_drawer_ad.clicks', 'homepage.clicks', 'homepage_ad.clicks', 'fullscreen_ad.clicks'
+      ]);
+    }
+
+    match /system/{sysDoc} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin();
+      allow update: if isAuthenticated() && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+        'totalClicks', 'totalAdClicks', 'navClicks', 'homeClicks', 'fullscreenClicks', 'lastClickAt',
+        'nav_drawer.clicks', 'nav_drawer_ad.clicks', 'homepage.clicks', 'homepage_ad.clicks', 'fullscreen_ad.clicks'
+      ]);
+    }
+
+    // Fallback for legacy collections
+    match /coordinators/{coordId} {
+      allow read: if isAuthenticated();
+      allow write: if isSuperAdmin() || isCoordinator();
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.akon.subtools.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_routine"
+        android:name="com.akon.subtools.fragments.RoutineFragment"
+        android:label="Routine"
+        tools:layout="@layout/fragment_routine" />
+
+    <fragment
+        android:id="@+id/navigation_profile_subject"
+        android:name="com.akon.subtools.fragments.ProfileSubjectFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_subject" />
+
+    <fragment
+        android:id="@+id/navigation_notices"
+        android:name="com.akon.subtools.fragments.NoticesFragment"
+        android:label="Notices"
+        tools:layout="@layout/fragment_notices" />
+
+    <fragment
+        android:id="@+id/navigation_directory"
+        android:name="com.akon.subtools.fragments.DirectoryFragment"
+        android:label="Directory"
+        tools:layout="@layout/fragment_directory" />
+
+    <fragment
+        android:id="@+id/navigation_lost_found"
+        android:name="com.akon.subtools.fragments.LostFoundFragment"
+        android:label="Lost &amp; Found"
+        tools:layout="@layout/fragment_lost_found" />
+
+    <fragment
+        android:id="@+id/navigation_transport"
+        android:name="com.akon.subtools.fragments.TransportFragment"
+        android:label="Transport"
+        tools:layout="@layout/fragment_transport" />
+
+    <fragment
+        android:id="@+id/navigation_cover_page"
+        android:name="com.akon.subtools.fragments.CoverPageFragment"
+        android:label="Cover Page"
+        tools:layout="@layout/fragment_cover_page" />
+
+    <fragment
+        android:id="@+id/navigation_about_developer"
+        android:name="com.akon.subtools.fragments.AboutDeveloperFragment"
+        android:label="About Developer"
+        tools:layout="@layout/fragment_about_developer" />
+
+    <fragment
+        android:id="@+id/navigation_contributors"
+        android:name="com.akon.subtools.fragments.ContributorsFragment"
+        android:label="Contributors"
+        tools:layout="@layout/fragment_contributors" />
+
+    <!-- Legacy / direct fragment references if navigated to programmatically -->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.akon.subtools.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_subjects"
+        android:name="com.akon.subtools.fragments.SubjectFragment"
+        android:label="Subjects"
+        tools:layout="@layout/fragment_subject" />
+
+    <fragment
+        android:id="@+id/navigation_faculty"
+        android:name="com.akon.subtools.fragments.FacultyFragment"
+        android:label="Faculty Directory"
+        tools:layout="@layout/fragment_faculty" />
+
+    <fragment
+        android:id="@+id/navigation_blood_donor"
+        android:name="com.akon.subtools.fragments.BloodDonorFragment"
+        android:label="Blood Donors"
+        tools:layout="@layout/fragment_blood_donor" />
+
+    <fragment
+        android:id="@+id/navigation_need_to_talk"
+        android:name="com.akon.subtools.fragments.NeedToTalkFragment"
+        android:label="Need to Talk?"
+        tools:layout="@layout/fragment_need_to_talk" />
+
+    <fragment
+        android:id="@+id/navigation_tuition_finder"
+        android:name="com.akon.subtools.fragments.TuitionFinderFragment"
+        android:label="Tuition Finder"
+        tools:layout="@layout/fragment_tuition_finder" />
+
+    <fragment
+        android:id="@+id/navigation_room_finder"
+        android:name="com.akon.subtools.fragments.RoomSharingFragment"
+        android:label="Room Sharing"
+        tools:layout="@layout/fragment_room_sharing" />
+
+    <fragment
+        android:id="@+id/navigation_exam_routine"
+        android:name="com.akon.subtools.fragments.ExamRoutineFragment"
+        android:label="Exam Routine"
+        tools:layout="@layout/fragment_exam_routine" />
+
+    <fragment
+        android:id="@+id/navigation_academic_reminders"
+        android:name="com.akon.subtools.fragments.AcademicRemindersFragment"
+        android:label="Academic Reminders"
+        tools:layout="@layout/fragment_academic_reminders" />
+
+    <fragment
+        android:id="@+id/navigation_slides"
+        android:name="com.akon.subtools.fragments.SlidesFragment"
+        android:label="Slides &amp; Materials"
+        tools:layout="@layout/fragment_slides" />
+</navigation>

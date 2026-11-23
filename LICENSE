@@ -1,0 +1,67 @@
+SUBTOOLS COMMUNITY SOURCE & NON-COMMERCIAL LICENSE
+Version 1.0 (November 2026)
+
+Copyright (c) 2024-2026 Akon M Hasib / SUBTools Project Contributors.
+All Rights Reserved.
+
+================================================================================
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+================================================================================
+
+1. DEFINITIONS
+   "Software" refers to the source code, documentation, graphics, user interface designs,
+   and build configurations contained within the SUBTools repository, including SUBMobile,
+   SUBAdmin, STC, and related modules.
+   "Licensor" refers to Akon M Hasib, the copyright holder and creator of the Software.
+   "You" (or "Your") refers to an individual or legal entity exercising permissions granted
+   by this License.
+   "Commercial Use" means any use, reproduction, distribution, sublicensing, SaaS hosting,
+   or deployment of the Software that is intended for or directed towards commercial advantage,
+   monetary compensation, or business sale.
+
+2. GRANT OF LICENSE (SOURCE-AVAILABLE / NON-COMMERCIAL)
+   Subject to the terms and restrictions herein, the Licensor hereby grants You a personal,
+   worldwide, non-exclusive, non-transferable, royalty-free license to:
+   a. Inspect, read, and review the source code for personal study and education;
+   b. Submit contributions, bug reports, and pull requests to the official repository;
+   c. Compile and test the Software privately for personal, strictly non-commercial evaluation.
+
+3. STRICT PROHIBITIONS & COMMERCIAL RESTRICTIONS
+   Under NO circumstances are You granted the right to:
+   a. RESELL OR MONETIZE: You shall not sell, license, rent, lease, white-label, or monetize
+      the Software, any binary compiled from it, or any derivative work based upon it;
+   b. HOST FOR VALUE: You shall not deploy or operate the Software as a hosted service (SaaS),
+      commercial web portal, or paid campus service without prior written agreement from Licensor;
+   c. UNAUTHORIZED CLONING / REBRANDING: You shall not rebrand, repackage, or distribute copies
+      or forks of this Software under another name or organization on public app stores (such as
+      Google Play Store, Apple App Store) or web hosting platforms for public use;
+   d. REMOVE NOTICES: You shall not remove, alter, or obscure any copyright notices, trademark
+      identifiers, author attributions, or this license file from any copy or fork.
+
+4. CONTRIBUTIONS AND INTELLECTUAL PROPERTY
+   Any pull request, patch, or contribution You submit to the official repository is licensed to
+   the Licensor with an irrevocable, perpetual, transferable right to incorporate, adapt, and
+   distribute such contributions under this license or any successor license chosen by the Licensor.
+
+5. TRADEMARK AND IDENTITY
+   This License does not grant permission to use the trade names, trademarks, service marks,
+   logos, or product names of "SUBTools", "State University of Bangladesh", or associated author
+   identities, except as required for reasonable and customary use in describing the origin
+   of the Software.
+
+6. PRODUCTION INFRASTRUCTURE ACCESS
+   This License grants NO access rights to production databases, Supabase instances, Firebase
+   projects, remote APIs, or cloud infrastructure belonging to the author or the official
+   SUBTools deployment. Contributors must supply their own backend instances for development.
+
+7. DISCLAIMER OF WARRANTY & LIMITATION OF LIABILITY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+   DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+================================================================================
+For licensing inquiries, commercial permissions, or custom deployments, contact:
+Akon M Hasib (Official Repository Maintainer)
+================================================================================

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Utility Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Light Blue / Sky Blue Campus Brand Palette -->
+    <color name="primary">#0077B6</color>
+    <color name="primary_dark">#03045E</color>
+    <color name="primary_variant">#00B4D8</color>
+    <color name="primary_light">#CAF0F8</color>
+    <color name="sky_tint">#CAF0F8</color>
+    <color name="sky_light">#90E0EF</color>
+    <color name="sky_blue">#00B4D8</color>
+    <color name="ocean_blue">#0077B6</color>
+    <color name="navy_dark">#03045E</color>
+    
+    <color name="secondary">#38A3A5</color>
+    <color name="secondary_variant">#00B4D8</color>
+    <color name="outline">#CBD5E1</color>
+
+    <color name="accent">#00B4D8</color>
+    <color name="accent_dark">#0077B6</color>
+
+    <!-- Light Theme Surfaces (Sunlight & High-Contrast Readable) -->
+    <color name="bg_light">#F8FAFC</color>
+    <color name="bg_cream">#F8FAFC</color>
+    <color name="card_light">#FFFFFF</color>
+    <color name="card_cream">#FFFFFF</color>
+    <color name="text_primary_light">#090D16</color>
+    <color name="text_secondary_light">#334155</color>
+    <color name="text_hint_light">#64748B</color>
+    <color name="text_primary">#090D16</color>
+    <color name="text_secondary">#334155</color>
+    <color name="text_hint">#64748B</color>
+    <color name="border_light">#E2E8F0</color>
+    <color name="timeline_line">#CBD5E1</color>
+
+    <!-- Dark Theme Surfaces (Deep Obsidian) -->
+    <color name="bg_dark">#0B0F19</color>
+    <color name="surface_dark">#111827</color>
+    <color name="card_dark">#111827</color>
+    <color name="text_primary_dark">#F8FAFC</color>
+    <color name="text_secondary_dark">#CBD5E1</color>
+    <color name="text_hint_dark">#94A3B8</color>
+    <color name="border_dark">#1E293B</color>
+
+    <!-- Priority & Status Indicator Colors -->
+    <color name="priority_critical">#F43F5E</color>
+    <color name="priority_high">#F59E0B</color>
+    <color name="priority_normal">#10B981</color>
+    <color name="priority_low">#64748B</color>
+    <color name="emerald_500">#10B981</color>
+    <color name="amber_500">#F59E0B</color>
+    <color name="rose_500">#F43F5E</color>
+    <color name="text_tertiary">#94A3B8</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Routine Active Schedule Indicators -->
+    <color name="routine_active_badge_bg">#DCFCE7</color>
+    <color name="routine_active_badge_text">#047857</color>
+    <color name="routine_active_time_text">#047857</color>
+    <color name="routine_active_code_text">#065F46</color>
+
+    <!-- Theme Gradient Color Stops -->
+    <color name="gradient_card_start">#FFFFFF</color>
+    <color name="gradient_card_end">#F0F9FF</color>
+    <color name="gradient_hero_start">#0077B6</color>
+    <color name="gradient_hero_end">#00B4D8</color>
+    <color name="gradient_topbar_start">#FFFFFF</color>
+    <color name="gradient_topbar_end">#F0F9FF</color>
+    <color name="gradient_cyan_start">#00B4D8</color>
+    <color name="gradient_cyan_end">#0077B6</color>
+    <color name="gradient_mint_start">#57CC99</color>
+    <color name="gradient_mint_end">#38A3A5</color>
+
+    <!-- Shimmer Effects -->
+    <color name="shimmer_base">#E2E8F0</color>
+    <color name="shimmer_highlight">#F8FAFC</color>
+
+    <!-- Vibrant Accents -->
+    <color name="accent_yellow">#F59E0B</color>
+    <color name="accent_mint">#10B981</color>
+    <color name="accent_cyan">#06B6D4</color>
+    <color name="accent_blue">#0EA5E9</color>
+    <color name="accent_coral">#F43F5E</color>
+    <color name="accent_purple">#6366F1</color>
+    <color name="accent_green">#10B981</color>
+
+    <!-- Department Accents -->
+    <color name="dept_cse">#6366F1</color>
+    <color name="dept_dse">#0EA5E9</color>
+    <color name="dept_bba">#10B981</color>
+    <color name="dept_pharmacy">#F43F5E</color>
+    <color name="dept_law">#F97316</color>
+
+    <!-- Slate Neutrals -->
+    <color name="slate_50">#F8FAFC</color>
+    <color name="slate_100">#F1F5F9</color>
+    <color name="slate_200">#E2E8F0</color>
+    <color name="slate_300">#CBD5E1</color>
+    <color name="slate_400">#94A3B8</color>
+    <color name="slate_600">#475569</color>
+    <color name="slate_700">#334155</color>
+    <color name="slate_800">#1E293B</color>
+
+    <color name="divider">#F1F5F9</color>
+    <color name="divider_color">#F1F5F9</color>
+
+    <!-- Architecture Department Logo Tinting -->
+    <color name="arch_logo_tint">@color/transparent</color>
+
+    <!-- Web Portal Equivalent Badge Colors -->
+    <color name="badge_role_bg">#ECFDF5</color>
+    <color name="badge_role_text">#047857</color>
+    <color name="badge_role_border">#A7F3D0</color>
+
+    <color name="badge_dept_bg">#F1F5F9</color>
+    <color name="badge_dept_text">#334155</color>
+    <color name="badge_dept_border">#E2E8F0</color>
+
+    <color name="badge_term_bg">#ECFEFF</color>
+    <color name="badge_term_text">#0E7490</color>
+    <color name="badge_term_border">#A5F3FC</color>
+
+    <color name="badge_batch_bg">#EEF2FF</color>
+    <color name="badge_batch_text">#4338CA</color>
+    <color name="badge_batch_border">#C7D2FE</color>
+
+    <color name="badge_section_bg">#FFFBEB</color>
+    <color name="badge_section_text">#B45309</color>
+    <color name="badge_section_border">#FDE68A</color>
+</resources>

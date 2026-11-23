@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Utility Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- SUBTools Sky Blue Brand Palette (Dark Mode) -->
+    <color name="primary">#00B4D8</color>           <!-- Vibrant Sky Blue (high-contrast on dark) -->
+    <color name="primary_dark">#0077B6</color>
+    <color name="primary_variant">#90E0EF</color>
+    <color name="primary_light">#03254C</color>     <!-- Deep Blue Container Background -->
+    <color name="text_on_primary">#03045E</color>
+
+    <color name="secondary">#38A3A5</color>         <!-- Teal Cyan (vibrant on dark) -->
+    <color name="secondary_variant">#00B4D8</color>
+    <color name="outline">#1E293B</color>
+    <color name="border_light">#1E293B</color>      <!-- Dark card & input border -->
+
+    <color name="sky_tint">#03254C</color>
+    <color name="sky_light">#0077B6</color>
+    <color name="sky_blue">#00B4D8</color>
+    <color name="ocean_blue">#0077B6</color>
+    <color name="navy_dark">#03045E</color>
+
+    <!-- Gradient Color Stops -->
+    <color name="gradient_sky_start">#0077B6</color>
+    <color name="gradient_sky_end">#00B4D8</color>
+    <color name="gradient_card_start">#111827</color>
+    <color name="gradient_card_end">#0B0F19</color>
+
+    <!-- Glassmorphism Stops -->
+    <color name="glass_sky_bg">#D90C1A30</color>
+    <color name="glass_sky_stroke">#8000B4D8</color>
+
+    <color name="accent_yellow">#FBBF24</color>
+    <color name="accent_mint">#34D399</color>
+    <color name="accent_cyan">#00B4D8</color>
+    <color name="accent_coral">#FB7185</color>
+    <color name="accent_purple">#38A3A5</color>
+
+    <!-- Dark Theme Surfaces (Deep Obsidian - DESIGN_SYSTEM.md) -->
+    <color name="bg_light">#0B0F19</color>
+    <color name="card_light">#111827</color>
+    <color name="bg_dark">#0B0F19</color>
+    <color name="card_dark">#111827</color>
+    <color name="border_dark">#1E293B</color>
+
+    <!-- Typography Text Colors -->
+    <color name="text_primary">#F8FAFC</color>      <!-- Bright readable crisp text -->
+    <color name="text_secondary">#94A3B8</color>    <!-- Muted slate text -->
+    <color name="text_tertiary">#64748B</color>
+    <color name="text_hint">#64748B</color>
+
+    <!-- Status & Priority Indicator Colors (Dark theme readable tints) -->
+    <color name="emerald_500">#34D399</color>
+    <color name="emerald_100">#064E3B</color>       <!-- Deep green badge background -->
+    <color name="status_live_bg">#064E3B</color>
+    <color name="status_live_stroke">#34D399</color>
+    <color name="amber_500">#FBBF24</color>
+    <color name="amber_600">#F59E0B</color>
+    <color name="amber_100">#451A03</color>         <!-- Deep amber badge background -->
+    <color name="rose_500">#FB7185</color>
+    <color name="rose_100">#4C0519</color>          <!-- Deep rose badge background -->
+    <color name="priority_critical">#FB7185</color>
+
+    <!-- Transport & GPS Colors (Dark theme) -->
+    <color name="gps_card_bg">#1E293B</color>
+    <color name="gps_btn_bg">#082F49</color>
+    <color name="gps_btn_stroke">#0369A1</color>
+    <color name="gps_btn_text">#38BDF8</color>
+
+    <!-- Slate Neutrals -->
+    <color name="slate_50">#0B0F19</color>
+    <color name="slate_100">#1E293B</color>         <!-- Elevated surface on dark cards -->
+    <color name="slate_200">#334155</color>
+    <color name="slate_300">#475569</color>
+    <color name="slate_400">#64748B</color>
+    <color name="slate_600">#94A3B8</color>
+    <color name="slate_700">#CBD5E1</color>
+    <color name="slate_800">#1E293B</color>
+
+    <color name="divider">#1F2937</color>
+    <color name="divider_color">#1F2937</color>
+</resources>

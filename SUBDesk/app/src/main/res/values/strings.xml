@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SUBDesk</string>
+    <string name="title_login">SUBDesk Sign In</string>
+    <string name="subtitle_login">Administrator Portal</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_routines">Routines</string>
+    <string name="nav_students">Students</string>
+    <string name="nav_faculty">Faculty</string>
+    <string name="nav_notices">Notices</string>
+    <string name="nav_transport">Transport</string>
+    <string name="nav_subjects">Subjects</string>
+</resources>

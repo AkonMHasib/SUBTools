@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <!-- Timeline left column -->
+    <RelativeLayout
+        android:id="@+id/layout_timeline"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical">
+
+        <View
+            android:id="@+id/timeline_line_top"
+            android:layout_width="2dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/timeline_line" />
+
+        <View
+            android:id="@+id/timeline_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@id/timeline_line_top"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_timeline_dot" />
+
+        <View
+            android:id="@+id/timeline_line_bottom"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/timeline_dot"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/timeline_line" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginVertical="6dp"
+        android:background="@drawable/bg_card_shadow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/badge_priority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="CRITICAL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_priority_badge"
+                    android:backgroundTint="@color/priority_critical" />
+
+                <TextView
+                    android:id="@+id/text_notice_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="2026-06-25"
+                    android:textColor="@color/text_secondary_light"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_notice_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notice Title Placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/text_notice_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Notice content snippet placeholder text goes here..."
+                android:textColor="@color/text_secondary_light"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_notice_attachment"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_notice_sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Publisher: Admin"
+                android:textColor="@color/text_hint_light"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
